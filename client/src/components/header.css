@@ -16,3 +16,59 @@
     width: 75px;
     object-fit: contain;
 }
+
+.header_second{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.header_second > input{
+    border: none;
+    outline: none;
+    width: 36vw;
+    padding: 10px 15px;
+    border-radius: 3px;
+}
+.header_second >.MuiSvgIcon-root{
+    color:#2874f0;
+    padding:5px;
+    font-size:25px
+}
+
+.header_third > button{
+    color: #2874f0;
+    border: none;
+    outline: none;
+    width: 9vw;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 7px;
+}
+
+.header_fourth{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header_fourth >span{
+    color:white;
+    font-weight: 600;
+}
+.header_fourth,.header_fifth> .MuiSvgIcon-root{
+    color: white;
+}
+
+.header_fifth{
+    display: flex;
+    align-items: center;
+}
+
+.header_fifth > p{
+    color:white;
+    font-weight: 600;
+    cursor:pointer;
+}
