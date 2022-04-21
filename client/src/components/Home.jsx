@@ -1,8 +1,12 @@
 import React from 'react'
-
+import Header from './Header';
+import Category_header from './Category_header';
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+      <Header/>
+    <Category_header/>
+    </>
   )
 }
 
