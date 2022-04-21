@@ -1,20 +1,26 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect,useState } from 'react';
 import './category_header.css'
 
 const Category_header = () => {
+    const [cat,setCat] = useState([]);
+
+    async function getUser() {
+        try {
+          const response = await axios.get('http://localhost:8000/category');
+          console.log(response.data);
+          setCat(response.data);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    useEffect(()=>{
+        getUser()
+    },[])
     return (
         <>
-            <div class="flex-container">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
-                <div>5</div>
-                <div>6</div>
-                <div>7</div>
-                <div>8</div>
-                <div>9</div>
-                <div>10</div>
+            <div className="flex-container">
+            {}
             </div>
         </>
     )
