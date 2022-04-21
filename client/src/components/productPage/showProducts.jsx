@@ -1,16 +1,16 @@
 
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import './product.css'
+import '../showproduct.css'
 
-const Producs = () => {
+const ShowProducts = () => {
 
     const [product, setproduct] = useState([]);
 
     async function getUser() {
         try {
             const response = await axios.get('http://localhost:8000/products');
-            // console.log(response.data);
+            console.log(response.data);
             setproduct(response.data);
         } catch (error) {
             console.error(error);
@@ -28,7 +28,7 @@ const Producs = () => {
                         <div key={elm.id}>
                             <img src={elm.image} alt='product img' className='productId' />
                             <h3>{elm.title}</h3>
-                            <h2>{elm.price}</h2>
+                            <h2><span><b>{elm.price}</b></span><span>Rating{elm.rating}</span></h2>
                             <button>View</button>
                             <button>Add to Cart</button>
                         </div>
@@ -39,4 +39,4 @@ const Producs = () => {
     )
 }
 
-export default Producs
+export default ShowProducts
