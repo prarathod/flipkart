@@ -1,0 +1,13 @@
+
+
+.mi{
+    
+    margin: 40PX 5PX 5PX 10PX;
+    width: 90px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.mi>div>select{
+    padding: 5px;
+}
