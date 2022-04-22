@@ -1,6 +1,6 @@
 
 
-.main{
+.main1{
     display: grid;
     grid-template-columns: 80% 20%;
     /* border: 2px solid red; */
@@ -14,4 +14,18 @@
     background-color: rgb(59, 132, 209);
     border-radius: 10px;
     border: none;
+}
+
+.product1{
+    display: grid;
+    grid-template-columns: 34% 33% 33% ;
+    text-align: center;
+    margin: 30px;
+}
+
+.product1 > div{
+    margin:15px;
+    padding: 10px;
+    box-shadow:3px 3px 3px 3px rgb(92, 86, 99); 
+    border-radius: 10px;
 }

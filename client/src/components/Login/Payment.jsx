@@ -1,12 +1,13 @@
 import React from 'react'
 import Header from '../Header'
+import { useNavigate } from 'react-router-dom';
 const Payment = () => {
-  // const history = useHistory();
+  let navigate = useNavigate();
   const pay = () => {
     setTimeout(() => {
       alert("Payment success..")
-      // history.push({pathname:  "/"});
-    }, 3000)
+      navigate('/');
+    }, 1000)
 
   }
   return (
@@ -20,9 +21,8 @@ const Payment = () => {
         <br />
         <input type='number' className='input' placeholder='Enter CVV' />
         <br />
-        <input type='submit' className='btn' />
+        <input type='submit' className='btn' onClick={() => pay()} placeholder="Make Payment"/>
         <br />
-        <p className='user' onClick={() => pay()}>Existing User Click To Payment</p>
       </div>
     </>
   )

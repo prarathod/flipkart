@@ -3,7 +3,7 @@ import Header from './Header'
 import './login.css';
 import Login1 from './Login/Login1';
 import Register from './Login/Register';
-const Login = () => {
+const Login = ({check}) => {
 
     const [flag,setFalg] =useState(false);
     function changeFalg(){
@@ -14,7 +14,7 @@ const Login = () => {
         <>
             <Header />
             <div>
-                {flag?<Login1 changeFalg={changeFalg}/>:<Register changeFalg={changeFalg}/>}
+                {flag?<Login1 changeFalg={changeFalg} check={check}/>:<Register changeFalg={changeFalg} check={check}/>}
             </div>
             
         </>

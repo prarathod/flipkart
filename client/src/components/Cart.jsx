@@ -2,11 +2,10 @@ import React, { useEffect, useState } from 'react'
 import Header from './Header';
 import {Link} from 'react-router-dom'
 import './cart.css';
+
 const Cart = (props) => {
-    const [product, setProduct] = useState([]);
-    let productObj = {};
-    
-    
+    let data = localStorage.getItem("city");  
+    const [product, setProduct] = useState([]);  
     useEffect(() => {
         setProduct(props.cart)
     }, []);
@@ -20,9 +19,9 @@ const Cart = (props) => {
     }
     return (<>
         <Header />
-        <div className='main'>
+        <div className='main1'>
 
-            <div className='product'>
+            <div className='product1'>
                 {product.map((elm) => {
                     return (
                         <div key={elm.id}>

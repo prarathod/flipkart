@@ -2,9 +2,17 @@
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     text-align: center;
+    margin: 30px;
 }
 
 .productId{
     width: 100px;
     margin: auto;
+}
+
+.product > div{
+    margin:15px;
+    padding: 10px;
+    box-shadow:3px 3px 3px 3px rgb(92, 86, 99); 
+    border-radius: 10px;
 }

@@ -53,14 +53,22 @@ const ShowProduct = (props) => {
       <div className='product'>
         {product.map((elm) => {
           return (
-            <div key={elm.id}>
-              <img src={elm.image} alt='product img' className='productId' />
-              <h3>{elm.title}</h3>
-              <h2>{elm.price}</h2>
-              <Link to='/products/detail'>
-                <button onClick={() => props.detail(elm)}>View</button>
-              </Link>
-              <button onClick={() => props.addTocart(elm)} >Add to Cart</button>
+            <div key={elm.id} className="align">
+              <div>
+                <img src={elm.image} alt='product img' className='productId' />
+              </div>
+              <div>
+                <h3>{elm.title}</h3>
+              </div>
+              <div>
+                <h2>{elm.price}</h2>
+              </div>
+              <div>
+                <Link to='/products/detail'>
+                  <button onClick={() => props.detail(elm)}>View</button>
+                </Link>
+                <button onClick={() => props.addTocart(elm)} >Add to Cart</button>
+              </div>
             </div>
           )
         })}

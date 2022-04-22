@@ -1,7 +1,25 @@
 .Prod{
     display: grid;
     grid-template-columns: 20% 80%;
+    
 }
 .Prod> div{
     border-left: 2px solid black;
+}
+
+.product > div{
+    margin:15px;
+    padding: 10px;
+    box-shadow:3px 3px 3px 3px rgb(92, 86, 99); 
+    border-radius: 10px;
+}
+
+.align{
+    display: grid;
+    grid-template-rows:  40% 35% 15% 10%;
+}
+
+.align > div>button{
+    
+    margin:10px;
 }
