@@ -1,9 +1,10 @@
 
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import '../showproduct.css'
+import '../showproduct.css';
+import { Link } from 'react-router-dom';
 
-const ShowProducts = () => {
+const ShowProducts = (props) => {
 
     const [product, setproduct] = useState([]);
 
@@ -29,7 +30,9 @@ const ShowProducts = () => {
                             <img src={elm.image} alt='product img' className='productId' />
                             <h3>{elm.title}</h3>
                             <h2><span><b>{elm.price}</b></span><span>Rating{elm.rating}</span></h2>
-                            <button>View</button>
+                            <Link to='/products/detail'>
+                            <button onClick={()=>props.detail(elm)}>View</button>
+                            </Link>
                             <button>Add to Cart</button>
                         </div>
                     )

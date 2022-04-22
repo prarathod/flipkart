@@ -7,7 +7,7 @@ const Home = (props) => {
     <>
     <Header/>
     <Category_header data={props.name}/>
-    <Producs addTocart={props.addTocart}/>
+    <Producs addTocart={props.addTocart} detail={props.detail}/>
     </>
   )
 }

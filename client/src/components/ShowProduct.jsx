@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './product.css';
 import Price from './filtes/Price'
-
+import { Link } from 'react-router-dom';
 const ShowProduct = (props) => {
   const [product, setproduct] = useState([]);
   const [filter, setFilter] = useState(0)
@@ -14,15 +14,15 @@ const ShowProduct = (props) => {
 
   async function filterFun(elm) {
     setFilter(elm);
-    if(filter==10){
-      product.sort((a,b)=>{
+    if (filter == 10) {
+      product.sort((a, b) => {
         // console.log(a);
-        return  b.price-a.price
+        return b.price - a.price
       })
-    }else {
-      product.sort((a,b)=>{
+    } else {
+      product.sort((a, b) => {
         // console.log(a);
-        return  a.price-b.price
+        return a.price - b.price
       })
     }
   }
@@ -57,8 +57,10 @@ const ShowProduct = (props) => {
               <img src={elm.image} alt='product img' className='productId' />
               <h3>{elm.title}</h3>
               <h2>{elm.price}</h2>
-              <button>View</button>
-              <button onClick={()=>props.addTocart(elm)} >Add to Cart</button>
+              <Link to='/products/detail'>
+                <button onClick={() => props.detail(elm)}>View</button>
+              </Link>
+              <button onClick={() => props.addTocart(elm)} >Add to Cart</button>
             </div>
           )
         })}

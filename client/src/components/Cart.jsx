@@ -5,13 +5,13 @@ import './cart.css';
 const Cart = (props) => {
     const [product, setProduct] = useState([]);
     let productObj = {};
+    
+    
     useEffect(() => {
         setProduct(props.cart)
-        product.forEach((elm)=>{
-            console.log("cart page obj : ", product)
-        })
     }, []);
-    let 
+
+    
     const remove = (elm) => {
         const newProduct = product.filter((i) => {
             return i.id != elm.id;

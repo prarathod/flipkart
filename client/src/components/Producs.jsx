@@ -1,6 +1,7 @@
 
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './product.css'
 
 const Producs = (props) => {
@@ -29,7 +30,9 @@ const Producs = (props) => {
                             <img src={elm.image} alt='product img' className='productId' />
                             <h3>{elm.title}</h3>
                             <h2>{elm.price}</h2>
-                            <button>View</button>
+                            <Link to='/products/detail'>
+                            <button onClick={()=>props.detail(elm)}>View</button>
+                            </Link>
                             <button onClick={()=>props.addTocart(elm)}>Add to Cart</button>
                         </div>
                     )
