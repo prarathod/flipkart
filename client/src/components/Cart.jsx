@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import Header from './Header';
+import {Link} from 'react-router-dom'
 import './cart.css';
 const Cart = (props) => {
     const [product, setProduct] = useState([]);
+    let productObj = {};
     useEffect(() => {
         setProduct(props.cart)
+        product.forEach((elm)=>{
+            console.log("cart page obj : ", product)
+        })
     }, []);
-
+    let 
     const remove = (elm) => {
         const newProduct = product.filter((i) => {
             return i.id != elm.id;
@@ -29,9 +34,11 @@ const Cart = (props) => {
                     )
                 })}
             </div>
+            <Link to="/payment">
             <div className='mainbtn'>
                 <button>Place Order</button>
             </div>
+            </Link>
 
         </div>
 
