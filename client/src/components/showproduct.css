@@ -3,6 +3,5 @@
     grid-template-columns: 20% 80%;
 }
 .Prod> div{
-    height: 500px;
-    border: 2px solid black;
+    border-left: 2px solid black;
 }

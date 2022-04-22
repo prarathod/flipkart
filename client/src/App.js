@@ -15,6 +15,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home name={catnamefun}/>}/>
         <Route path='/products' element={<ShowProduct catName={catName}/>}/>
+        
       </Routes>
       
     </>
