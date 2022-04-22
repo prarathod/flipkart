@@ -3,7 +3,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import './header.css';
-import Cart from './Cart'
+
 import { Link } from 'react-router-dom';
 const Header = () => {
     return (

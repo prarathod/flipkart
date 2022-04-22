@@ -16,12 +16,12 @@ const ShowProduct = (props) => {
     setFilter(elm);
     if(filter==10){
       product.sort((a,b)=>{
-        console.log(a);
+        // console.log(a);
         return  b.price-a.price
       })
     }else {
       product.sort((a,b)=>{
-        console.log(a);
+        // console.log(a);
         return  a.price-b.price
       })
     }
@@ -30,7 +30,7 @@ const ShowProduct = (props) => {
     try {
       if (props.catName == "Top Offers") {
         const response = await axios.get('http://localhost:8000/products');
-        console.log(response.data)
+        // console.log(response.data)
         setproduct(response.data);
       } else {
         const response = await axios.get(`http://localhost:8000/products?category=${props.catName.toLowerCase()}`);
@@ -58,7 +58,7 @@ const ShowProduct = (props) => {
               <h3>{elm.title}</h3>
               <h2>{elm.price}</h2>
               <button>View</button>
-              <button>Add to Cart</button>
+              <button onClick={()=>props.addTocart(elm)} >Add to Cart</button>
             </div>
           )
         })}

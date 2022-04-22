@@ -3,7 +3,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import './product.css'
 
-const Producs = () => {
+const Producs = (props) => {
 
     const [product, setproduct] = useState([]);
 
@@ -30,7 +30,7 @@ const Producs = () => {
                             <h3>{elm.title}</h3>
                             <h2>{elm.price}</h2>
                             <button>View</button>
-                            <button>Add to Cart</button>
+                            <button onClick={()=>props.addTocart(elm)}>Add to Cart</button>
                         </div>
                     )
                 })}

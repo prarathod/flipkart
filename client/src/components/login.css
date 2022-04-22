@@ -2,11 +2,23 @@
 .center{
    border: 1px solid red;
    padding: 10px;
-   margin: 20%;
+   margin: 10% 25%;
 }
 
 .center >input{
     padding: 10px;
     margin: 10px;
     width: 90%;
+}
+
+.btn{
+    color: wheat;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(114, 114, 243);
+}
+
+.user{
+    color: blue;
+    cursor:pointer
 }

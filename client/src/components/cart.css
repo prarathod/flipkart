@@ -1,0 +1,17 @@
+
+
+.main{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    /* border: 2px solid red; */
+    margin: 40px;
+}
+
+.mainbtn>button{
+    height: 50px;
+    width: 150px;
+    color:aliceblue;
+    background-color: rgb(59, 132, 209);
+    border-radius: 10px;
+    border: none;
+}

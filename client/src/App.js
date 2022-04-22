@@ -8,17 +8,21 @@ import Cart from './components/Cart';
 import Login from './components/Login';
 function App() {
   const [catName, setCatName] = useState("hello");
-  const [cart,setCart] = useState([]);
+  let cart = [];
   const catnamefun = (name)=>{
     setCatName(name);
   }
 
+  function addTocart(elm){
+    cart.push(elm)
+    console.log("clied",cart)
+  }
   return (
     <>
       <Routes>
-        <Route path='/' element={<Home name={catnamefun}/>}/>
-        <Route path='/products' element={<ShowProduct catName={catName}/>}/>
-        <Route path='/cart' element={<Cart/>}/>
+        <Route path='/' element={<Home name={catnamefun} addTocart={addTocart}/>}/>
+        <Route path='/products' element={<ShowProduct catName={catName} addTocart={addTocart} />}/>
+        <Route path='/cart' element={<Cart cart={cart}/>}/>
         <Route path='/login' element={<Login/>}/>
         
       </Routes>
