@@ -1,11 +1,18 @@
-import React from 'react'
+import React ,{useState}from 'react'
 import SearchIcon from '@mui/icons-material/Search';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import './header.css';
 
 import { Link } from 'react-router-dom';
-const Header = () => {
+
+const Header = ({seachFunc}) => {
+    const [inputData,setInputData] = useState('')
+    
+    function chageData (e){
+        setInputData(e.target.value)
+        seachFunc(inputData)
+    }
     return (
         <>
             <div className='header'>
@@ -27,7 +34,7 @@ const Header = () => {
                     </div>
                 </Link>
                 <div className='header_second'>
-                    <input type='text' placeholder='Seach for products' />
+                    <input type='text' placeholder='Seach for products' onChange={(e)=>chageData(e)}/>
                     <SearchIcon />
                 </div>
                 <Link to='/login'>
